@@ -1,0 +1,24 @@
+# Deploy blueprint for Render (https://render.com).
+# A paid "starter" instance is used so the server never sleeps and so it can
+# have a persistent disk, which is where accounts and ratings are saved.
+services:
+  - type: web
+    name: kingside
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: ALLOWED_ORIGINS        # the address your pages are hosted at (GitHub Pages)
+        value: https://orange12234.github.io
+      - key: SITE_URL
+        value: https://orange12234.github.io/TEST2
+      - key: DB_PATH
+        value: /var/data/chess.db
+    disk:
+      name: kingside-data
+      mountPath: /var/data
+      sizeGB: 1

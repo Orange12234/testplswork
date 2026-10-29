@@ -1,0 +1,14 @@
+Chess piece artwork
+===================
+
+The twelve piece images in this folder (wK.svg ... bP.svg) are the "cburnett" piece
+set, drawn by Colin M.L. Burnett (https://en.wikipedia.org/wiki/User:Cburnett).
+
+They were taken from the npm package "chessground" 9.2.1
+(https://www.npmjs.com/package/chessground), which is distributed under the
+GNU General Public License, version 3 or later. The licence text is in COPYING.txt
+next to this file. The only change made to the images is adding a viewBox attribute
+to the <svg> tag so that they scale to any size.
+
+These SVG files are the complete source of the artwork. This credit applies only to
+the files in this folder, not to the rest of the site.
